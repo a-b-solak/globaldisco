@@ -7,6 +7,29 @@
     .audio-player {
       width: 100%;
     }
+
+    .audio-wrapper {
+      width: 100%;
+      height: 150px;         /* match iframe height */
+      border: 1px solid #000000;
+      border-radius: 6px;
+      background: #292929;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    .audio-wrapper img {
+      max-height: 100px;      /* logo size */
+      margin-bottom: 8px;
+    }
+
+    .audio-wrapper audio {
+      width: 100%;
+    }
+
   </style>
   <style>
     body {
@@ -31,6 +54,16 @@
     .col {
       padding: 3px;
     }
+    .prompt-box {
+      background-color: #f0f0f0;
+      border-left: 4px solid #000000;
+      padding: 10px;
+      font-style: italic;
+      font-size: 0.95rem;
+      height: 150px; /* match iframe and audio */
+      display: flex;
+      align-items: center;
+    }
   </style>
 </head>
 <body>
@@ -41,9 +74,15 @@
     </p>
     <p class="text-center"></p>
 
-    <h1 class="top-title">Opera</h1>
+    <h1 class="text-center top-title">Opera</h1>
     <h3>Suno</h3>
     <div class="row">
+      <div class="col">
+        <p><strong>Prompt</strong></p>
+        <div class="prompt-box">
+          “classical, opera, choral, mezzo soprano, contralto, mexican.”
+        </div>
+      </div>
       <div class="col">
         <p>Reference</p>
         <iframe
@@ -57,9 +96,12 @@
       </div>
       <div class="col">
         <p>Generated</p>
-        <audio controls class="audio-player">
-          <source src="music/gen_opera/opera_suno_15140.mp3" type="audio/mp3">
-        </audio>
+        <div class="audio-wrapper">
+          <img src="images/suno.jpeg" alt="Suno Logo">
+          <audio controls>
+            <source src="music/gen_opera/opera_suno_15140.mp3" type="audio/mp3">
+          </audio>
+        </div>
       </div>
     <div class="col">
     <p>Closest Neighbor</p>
@@ -139,7 +181,7 @@
     </div>
 
 
-    <h1 class="top-title">Soukous</h1>
+    <h1 class="text-center top-title">Soukous</h1>
     <h3>Suno</h3>
     <div class="row">
       <div class="col">
@@ -237,7 +279,7 @@
     </div>
 
 
-    <h1 class="top-title">Anatolian Rock</h1>
+    <h1 class="text-center top-title">Anatolian Rock</h1>
     <h3>Suno</h3>
     <div class="row">
       <div class="col">
@@ -334,7 +376,7 @@
     </div>
     </div>
 
-    <h1 class="top-title">Pub Rock</h1>
+    <h1 class="text-center top-title">Pub Rock</h1>
     <h3>Suno</h3>
     <div class="row">
       <div class="col">
